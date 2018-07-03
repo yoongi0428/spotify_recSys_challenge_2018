@@ -8,9 +8,9 @@ you can send us an email at hojin.yang7@gamil.com.
 **This document is constantly being updated.**
 
 
-This project is an automatic playlist continuation(APC) system implemented using Tensorflow.  
-The main algorithm we use is Denoising Autoencoders which reconstructs original playlists from an input of corrupted ones. 
-In additon, we apply Character-level convolutional neural networks to playlist-title based music recommendation.  
+This project is an automatic playlist continuation(APC) system implemented using [Tensorflow](https://www.tensorflow.org/). 
+The main algorithm we use is Denoising Autoencoders which reconstructs original playlists from those with noise. 
+In addition, we apply Character-level convolutional neural networks to playlist-title based music recommendation.  
 
 
 The charateristics of our model are as follows: 
@@ -99,11 +99,11 @@ python main.py --dir sample --title
 python main.py --dir sample --challenge
 ```
 **[note]**  
-For all models, paramters are updated if the avearge of *update_seeds* r-precision score(s) increases. Our system calculates r-precision score every epoch.  
-You must specify only one mode(dae, title, challenge) when you set arguments of *main.py*.  
-You can easily replace parameter pickle files(for DAE) and/or ckpt graph file(for title) with other directories, 
+* For all models, paramters are updated if the avearge of *update_seeds* r-precision score(s) increases. Our system calculates r-precision score every epoch.  
+* You must specify only one mode(dae, title, challenge) when you set arguments of *main.py*.  
+* You can easily replace parameter pickle files(for DAE) and/or ckpt graph file(for title) with other directories, </br>
 if both have same number of tracks & artists and same CNN filter shapes.     
-If you want to just check metrices scores after replacing paramters with directory's, using *--testmode* is efficient:
+* If you want to just check metrices scores after replacing paramters with directory's, using *--testmode* is efficient:
 ```console
 # after replacing DAE pickle file from another folder #
 python main.py --dir sample --dae --testmode
@@ -172,7 +172,6 @@ Also, more epochs might be needed if you train using small data set.
 The directory contains one training json file and multiple types of test json files.  
 **challenge_dir** - *string.* Directory where final results are saved.   
 **testsize** - *int.* The number of maximum test playlist in each test case.
-
 
 ***[DAE]***  
 **epochs** - *int.* Number of training epoch.  
