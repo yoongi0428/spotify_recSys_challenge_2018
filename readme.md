@@ -2,7 +2,7 @@
 # Spotify RecSys Challenge 2018
 ***hello world!*** Team: Hojin Yang, Minjin Choi, and Yoon Ki Jeong. **Main track.**  
 Data Mining Lab, Sungkyunkwan university.   
-you can send us an email at hojin.yang7@gamil.com.  
+you can send us an email at hojin.yang7@gmail.com.  
 
  
 **This document is constantly being updated.**
